@@ -1,0 +1,18 @@
+{
+  "Blight": {
+    "signs_and_symptoms": "Blight:Yellow patches on leaves, dark spots, wilting.",
+    "measures": "Use resistant varieties, practice crop rotation, apply fungicides."
+  },
+  "Common_Rust": {
+    "signs_and_symptoms": "Common_rust:Minute flecks appear on both sides of the leaves and slowly develop into small, tan, slightly raised spots. These mainly elongated spots later turn into powdery, golden-brown pustules loosely scattered in patches on upper and lower sides. The color can change to black as the plant matures..",
+    "measures": "Resistant Varieties: Plant maize varieties with resistance or tolerance to common rust.Crop Rotation: Rotate crops to reduce the inoculum load in the field.Field Hygiene: Remove or plow under infected crop residues to reduce overwintering rust spores."
+  },
+  "Gray_Leaf_Spot": {
+    "signs_and_symptoms": "Early GLS symptoms include brown or tan spots 0.2 inches wide by 0.4-0.8 inches long, which span the region between the leaf veins. These lesions become irregularly-shaped to rectangular-shaped with yellow margins (more visible upon backlighting)..",
+    "measures": "Plant Health and ScoutingReduce drought stress through irrigation.Reduce nutrient stress through proper fertilization.Scout for GLS on the lower leaves prior to VT (tasseling). Preventive MeasuresPlant resistant varieties if available in your area.Plant late to avoid adverse conditions for plants.Keep up good ventilation by widening the space between plants.Plow deep and bury all plant residues after harvest.Plan long-term crop rotations with non-host plants."
+  },
+  "Healthy": {
+    "signs_and_symptoms": "Healthy:No visible signs of disease.",
+    "measures": "Practice good agricultural practices, monitor for any signs of disease."
+  }
+}

@@ -1,0 +1,1 @@
+//in charge of managing available memory

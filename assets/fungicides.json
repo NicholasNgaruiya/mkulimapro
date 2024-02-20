@@ -1,0 +1,21 @@
+{
+  "Blight": [
+    {"name": "Zineb", "price": "1000", "image": "assets/images/zineb.jpeg"},
+    {"name": "Zineb B", "price": "1500", "image": "assets/images/zineb.jpeg"},
+    {"name": "Zineb C", "price": "1500", "image": "assets/images/zineb.jpeg"},
+    {"name": "Zineb D", "price": "2000", "image": "assets/images/zineb.jpeg"}
+  ],
+  "Common_Rust": [
+    {"name": "ManCozeb", "price": "1200", "image": "assets/images/mancozeB.jpeg"},
+    {"name": "Chlorothalonil", "price": "1100", "image": "assets/images/chlorothalonil.jpeg"},
+    {"name": "ManCozeb1", "price": "1800", "image": "assets/images/mancozeB.jpeg"},
+    {"name": "Chlorothalonil1", "price": "1800", "image": "assets/images/chlorothalonil.jpeg"}
+  ],
+  "Gray_Leaf_Spot": [
+    {"name": "Maneb", "price": "1400", "image": "assets/images/Maneb.jpeg"},
+    {"name": "Headline", "price": "2000", "image": "assets/images/Headline.jpeg"},
+    {"name": "Maneb", "price": "2000", "image": "assets/images/Maneb.jpeg"},
+    {"name": "Headline", "price": "2000", "image": "assets/images/Headline.jpeg"}
+  ],
+  "Healthy": []
+}
