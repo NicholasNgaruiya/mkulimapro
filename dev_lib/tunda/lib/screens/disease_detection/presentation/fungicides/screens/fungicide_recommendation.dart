@@ -34,48 +34,6 @@ class _FungicideRecommendationWidgetState
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // const SizedBox(height: 20),
-              const Text(
-                'Recommended Fungicides ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: Colors.teal,
-                ),
-              ),
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10.0,
-                  mainAxisSpacing: 20.0,
-                ),
-                itemCount: fungicides.length,
-                itemBuilder: (BuildContext context, int index) {
-                  final fungicide = fungicides[index];
-                  return RecomendPlantCard(
-                    title: fungicide.name,
-                    country: 'Kenya',
-                    price: fungicide.price,
-                    image: fungicide.image,
-                    press: () {
-                      BlocProvider.of<CartBloc>(context).add(AddToCartEvent(
-                          CartItem(
-                              name: fungicide.name,
-                              price: fungicide.price,
-                              image: fungicide.image)));
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('${fungicide.name} added to cart'),
-                          duration: const Duration(seconds: 1),
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-              const SizedBox(height: 40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -174,6 +132,48 @@ class _FungicideRecommendationWidgetState
                         ],
                       ),
                     ),
+              const SizedBox(height: 20),
+              const Text(
+                'Recommended Fungicides ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.teal,
+                ),
+              ),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 20.0,
+                ),
+                itemCount: fungicides.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final fungicide = fungicides[index];
+                  return RecomendPlantCard(
+                    title: fungicide.name,
+                    country: 'Kenya',
+                    price: fungicide.price,
+                    image: fungicide.image,
+                    press: () {
+                      BlocProvider.of<CartBloc>(context).add(AddToCartEvent(
+                          CartItem(
+                              name: fungicide.name,
+                              price: fungicide.price,
+                              image: fungicide.image)));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('${fungicide.name} added to cart'),
+                          duration: const Duration(seconds: 1),
+                        ),
+                      );
+                    },
+                  );
+                },
+              ),
+              const SizedBox(height: 40),
             ],
           );
         } else if (state is RecommendedFungicidesLoading) {

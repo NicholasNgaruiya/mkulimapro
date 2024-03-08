@@ -11,7 +11,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final cameras = await availableCameras();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
-  runApp(MyApp(cameras: cameras,));
+  runApp(MyApp(
+    cameras: cameras,
+  ));
   // SystemChannels.lifecycle.setMessageHandler((msg) {
   //   if (msg!.contains("resume")) {
   //     _handleIncomingIntent();
@@ -31,7 +33,7 @@ void main() async {
 // }
 class MyApp extends StatelessWidget {
   const MyApp({super.key, required this.cameras});
-  final List<CameraDescription>cameras;
+  final List<CameraDescription> cameras;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
       title: 'Mkulima Pro',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFEEF1F8),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         fontFamily: "Intel",
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(foregroundColor: Colors.white),
@@ -55,7 +57,9 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: LaunchScreen(cameras: cameras,),
+      home: LaunchScreen(
+        cameras: cameras,
+      ),
     );
   }
 }

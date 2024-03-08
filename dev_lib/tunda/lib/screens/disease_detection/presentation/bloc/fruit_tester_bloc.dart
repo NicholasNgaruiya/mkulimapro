@@ -37,12 +37,15 @@ class FruitTesterBloc extends Bloc<FruitTesterEvent, FruitTesterState> {
           final shapeLength = plantRepo.inputShape;
           final resizeOp =
               ResizeOp(shapeLength[1], shapeLength[2], ResizeMethod.bilinear);
-          final normalizeOp = NormalizeOp(127.5, 127.5);
+          // final normalizeOp = NormalizeOp(127.5, 127.5);
+          // Normalize the pixel values to be between 0 and 1
+          final normalizeOp =
+              NormalizeOp(0, 1); // Assuming pixel values range from 0 to 255
           int cropSize = min(inputTensor.height, inputTensor.width);
           return ImageProcessorBuilder()
-              .add(cropOp)
+              // .add(cropOp)
               .add(resizeOp)
-              .add(normalizeOp)
+              // .add(normalizeOp)
               .build()
               .process(inputTensor);
         }
@@ -76,16 +79,27 @@ class FruitTesterBloc extends Bloc<FruitTesterEvent, FruitTesterState> {
               print('shapeLength $shapeLength');
               final resizeOp = ResizeOp(
                   shapeLength[1], shapeLength[2], ResizeMethod.bilinear);
-              final normalizeOp = NormalizeOp(127.5, 127.5);
+              // final normalizeOp = NormalizeOp(127.5, 127.5);
+              final normalizeOp = NormalizeOp(0, 1);
               print('Nomralize Op ${normalizeOp.stddev}');
 
               int cropSize = min(inputTensor.height, inputTensor.width);
               print('crop size $cropSize');
+              //
+              // Calculate mean and standard deviation for rescaling
+              //const mean = 0.0;
+              //const stddev =
+              1.0 / 255.0; // Rescale by dividing pixel values by 255.0
+
+              // Rescale the pixel values to be between 0 and 1
+              //final rescaleOp = NormalizeOp(mean, stddev);
+              //
 
               return ImageProcessorBuilder()
-                  //? .add(cropOp)
+                  // .add(cropOp)
                   .add(resizeOp)
-                  //? .add(normalizeOp)
+                  //.add(rescaleOp)
+                  // .add(normalizeOp)
                   .build()
                   .process(inputTensor);
             }

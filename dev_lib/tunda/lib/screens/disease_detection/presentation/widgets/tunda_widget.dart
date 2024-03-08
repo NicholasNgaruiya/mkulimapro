@@ -125,7 +125,7 @@ class _TundaWidgetState extends State<TundaWidget> {
                                   if (topScore < 20.0) {
                                     return const Center(
                                       child: Text(
-                                        'Error loading image.\nTake a clearer image.',
+                                        'Error loading image.\nEnter an image of  a maize leaf or take a clearer picture',
                                         style: TextStyle(fontSize: 15),
                                       ),
                                     );
@@ -155,7 +155,7 @@ class _TundaWidgetState extends State<TundaWidget> {
                                 if (state is FruitTesterError) {
                                   return const Center(
                                     child: Text(
-                                      'Error loading image.\nTake a clearer picture.',
+                                      'Error loading image.\nEnter an image of  a maize leaf or take a clearer picture',
                                       style: TextStyle(fontSize: 15),
                                     ),
                                   );

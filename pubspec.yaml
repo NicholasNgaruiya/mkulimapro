@@ -80,6 +80,11 @@ flutter:
     - assets/RiveAssets/
     - assets/images/
     - assets/disease_detection.tflite
+    # The addition model
+    - assets/maize_disease_detection.tflite
+    - assets/plantv2.tflite
+    - assets/plantv3.tflite
+    # The addition models end
     - assets/plant.tflite
     - assets/labels.txt
     - assets/images/foden.jpeg

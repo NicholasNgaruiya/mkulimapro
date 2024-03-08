@@ -7,7 +7,8 @@ import 'package:tunda/screens/disease_detection/data/model/tunda_model.dart';
 
 class FruitRepo {
   Future<PlantModel> loadPlantModel() async {
-    final interpreter = await Interpreter.fromAsset('plant.tflite',
+    // final interpreter = await Interpreter.fromAsset('plant.tflite',
+    final interpreter = await Interpreter.fromAsset('plantv2.tflite',
         options: InterpreterOptions());
     final inputShape = interpreter.getInputTensor(0).shape;
     final outputShape = interpreter.getOutputTensor(0).shape;
@@ -27,7 +28,9 @@ class FruitRepo {
   }
 
   Future<ClassifierModel> loadModel() async {
-    final interpreter = await Interpreter.fromAsset('disease_detection.tflite',
+    // final interpreter = await Interpreter.fromAsset('disease_detection.tflite',
+    final interpreter = await Interpreter.fromAsset(
+        'maize_disease_detection.tflite',
         options: InterpreterOptions());
     final inputShape = interpreter.getInputTensor(0).shape;
     final outputShape = interpreter.getOutputTensor(0).shape;
