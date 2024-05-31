@@ -30,6 +30,7 @@ void main() async {
 //     // Extract parameters and take appropriate action
 //     print("Received intent: $intentData");
 //   }
+
 // }
 class MyApp extends StatelessWidget {
   const MyApp({super.key, required this.cameras});
