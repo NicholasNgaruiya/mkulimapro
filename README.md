@@ -4,7 +4,8 @@ Mkulima pro is a mobile app that assists farmers in their daily activities in th
 
 # Download
 
-[Download the app](https://nicholasngaruiya.github.io/apks/app-release.apk)
+[Download the app](https://play.google.com/store/apps/details?id=com.mkulimapro.mkulimapro)
+https://play.google.com/store/apps/details?id=com.mkulimapro.mkulimapro
 
 # App Screenshots
 
